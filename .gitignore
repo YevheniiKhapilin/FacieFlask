@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+*.egg-info/
+
+# Flask-related cache files
+instance/
+*.db
+*.sqlite3
+
+# Jupyter notebooks checkpoints (if any)
+.ipynb_checkpoints/
+
+# Ignore uploads, result images, and user media
+static/*.jpg
+static/*.jpeg
+static/*.png
+static/*.gif
+static/result.jpg
+static/upload.jpg
+
+# VS Code and IDE config
+.vscode/
+.idea/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore __pycache__ in subfolders
+**/__pycache__/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+
+# Ignore compiled HTML/PDF (if any)
+*.html
+*.pdf
+
+# Keep only these (your main code)
+!*.py

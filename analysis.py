@@ -27,33 +27,17 @@ def get_metrics(image_path, return_points=False):
     extra_left_1 = P(192)#192
     extra_right_1 = P(416)#416
 
-    '''left_cheek = P(214)#58
-    right_cheek = P(434)'''
-
     extra_left_2 = P(172)#172
     extra_right_2 = P(397)#397
-
-    '''extra_left_3 = P(140)#176
-    extra_right_3 = P(369)'''
-
 
 
     # Відстані
     temple_width = np.linalg.norm(left_temple - right_temple)
-    #cheek_width = np.linalg.norm(left_cheek - right_cheek)
     jaw_width = np.linalg.norm(left_jaw - right_jaw)
     extra_width_1 = np.linalg.norm(extra_left_1 - extra_right_1)
     extra_width_2 = np.linalg.norm(extra_left_2 - extra_right_2)
-    #extra_width_3 = np.linalg.norm(extra_left_3 - extra_right_3)
 
-    '''combined_jaw_width = np.mean([
-        jaw_width * 0.6,
-        #cheek_width,
-        extra_width_1 * 0.5,
-        extra_width_2,
-        #extra_width_3
-    ])'''
-    combined_jaw_width = (jaw_width*0.7 + extra_width_1*0.5 + extra_width_2*0.8) / 2
+    combined_jaw_width = (jaw_width * 0.7 + extra_width_1 * 0.5 + extra_width_2 * 0.8) / 2
 
     ratio = (combined_jaw_width / temple_width)
 
@@ -74,10 +58,8 @@ def get_metrics(image_path, return_points=False):
         pts = {
             'left_temple': left_temple, 'right_temple': right_temple,
             'left_jaw': left_jaw, 'right_jaw': right_jaw,
-            #'left_cheek': left_cheek, 'right_cheek': right_cheek,
             'extra_left_1': extra_left_1, 'extra_right_1': extra_right_1,
-            'extra_left_2': extra_left_2, 'extra_right_2': extra_right_2,
-            #'extra_left_3': extra_left_3, 'extra_right_3': extra_right_3,
+            'extra_left_2': extra_left_2, 'extra_right_2': extra_right_2
         }
         return metrics, pts
 

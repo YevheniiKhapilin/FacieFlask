@@ -23,10 +23,10 @@ def index():
             pairs = [
                 ("left_jaw", "right_jaw", (255, 0, 0)),
                 ("left_temple", "right_temple", (0, 255, 255)),
-                ("left_cheek", "right_cheek", (0, 128, 255)),
+                #("left_cheek", "right_cheek", (0, 128, 255)),
                 ("extra_left_1", "extra_right_1", (0, 255, 0)),
                 ("extra_left_2", "extra_right_2", (255, 128, 0)),
-                ("extra_left_3", "extra_right_3", (255, 65, 0))
+                #("extra_left_3", "extra_right_3", (255, 65, 0))
             ]
 
             for left_key, right_key, color in pairs:
